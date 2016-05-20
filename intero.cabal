@@ -73,9 +73,15 @@ executable intero
     haskeline,
     process,
     transformers,
+    transformers-base,
+    monad-control,
+    exceptions,
     syb,
     containers,
-    time
+    vector,
+    time,
+    msgpack,
+    msgpack-rpc
   if os(windows)
     build-depends:
       Win32
