@@ -566,7 +566,7 @@ rUsesAt fp sl sc el ec sample = do
              Left err ->
                toObject $ Assoc $ V.singleton ("error", err)
              Right uses ->
-               toObject $ map (formatSpan . Right) uses
+               toObject $ Assoc $ V.singleton ("uses", map (formatSpan . Right) uses)
 
 
 runGHCi :: [(FilePath, Maybe Phase)] -> Maybe [String] -> GHCi ()
