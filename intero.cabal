@@ -74,9 +74,15 @@ executable intero
     haskeline,
     process,
     transformers,
+    transformers-base,
+    monad-control,
+    exceptions,
     syb,
     containers,
-    time
+    time,
+    vector,
+    msgpack,
+    msgpack-rpc
 
   if impl(ghc>=8.0.1)
     build-depends:
